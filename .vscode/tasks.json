@@ -1,0 +1,11 @@
+{
+    "version": "0.1.0",
+    "command": "C:\\Users\\Eleme.DESKTOP-U9ECOR9\\Documents\\CMU\\processing-3.3.7\\processing-java.exe",
+    "isShellCommand": true,
+    "args": [
+        "--force",
+        "--sketch=${workspaceRoot}",
+        "--output=${workspaceRoot}\\out",
+        "--run"
+    ]
+}
