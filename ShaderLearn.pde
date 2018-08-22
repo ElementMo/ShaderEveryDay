@@ -2,16 +2,23 @@ import peasy.*;
 PeasyCam cam;
 PShader toon;
 PShader particle;
+PShader snow;
 
 void setup()
 {
-  size(600, 600, P3D);
-
-
+  size(800, 400, P2D);
+  snow = loadShader("snow.glsl");
+  snow.set("RENDERSIZE", float(width), float(height));
 }
 void draw()
 {
+  drawSnow();
+}
 
+void drawSnow() 
+{
+  shader(snow);
+  rect(0, 0, width, height);
 }
 
 
@@ -33,7 +40,7 @@ void drawParticle()
   // particle = loadShader("rotatParticles.glsl");
   // particle.set("RENDERSIZE", float(width), float(height));
 
-  particle.set("iGlobalTime", millis()/100.0);
+  particle.set("iGlobalTime", millis()/1000.0);
   shader(particle);
   rect(0, 0, width, height);
 }
