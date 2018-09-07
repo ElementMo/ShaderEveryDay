@@ -1,4 +1,3 @@
-
 PShader blur, contrast;
 PImage img;
 PGraphics src, pass1, pass2, layer2, blend;
